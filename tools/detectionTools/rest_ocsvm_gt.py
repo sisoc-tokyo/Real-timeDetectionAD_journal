@@ -89,6 +89,7 @@ def preds():
     if securityid != None:
         securityid = securityid.strip("'")
         securityid = securityid.lower()
+        securityid = securityid.split('@')[0]
 
     # To specify parameter as Object
     inputLog = InputLog.InputLog(datetime, eventid, accountname, clientaddr, servicename, processname, objectname, sharedname, securityid)

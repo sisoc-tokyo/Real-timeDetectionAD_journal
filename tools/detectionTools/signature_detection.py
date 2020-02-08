@@ -6,6 +6,7 @@ import dateutil.parser
 import time
 from pytz import timezone
 import write_log
+import mysql.connector
 
 class SignatureDetector:
 
@@ -43,13 +44,10 @@ class SignatureDetector:
     df_cmd = pd.DataFrame(data=None, index=None, columns=["processname","tactics"], dtype=None, copy=False)
     df_cmd_white = pd.DataFrame(data=None, index=None, columns=["processname"], dtype=None, copy=False)
 
-    con=None
-
     cnt=0
 
     def __init__(self):
         print("constructor called")
-        conn = mysql.connector.connect(user='root', host='localhost', password='Gamzatti0301!', database='account')
 
     def is_attack(self):
         print("is_attack called")
@@ -108,8 +106,8 @@ class SignatureDetector:
 
         elif (inputLog.get_eventid() == SignatureDetector.EVENT_LOGIN):
             result = SignatureDetector.compareSID(inputLog)
-            result = SignatureDetector.isEternalWin8(inputLog)
-
+            if (result == SignatureDetector.RESULT_NORMAL):
+                result = SignatureDetector.isEternalWin8(inputLog)
 
         elif (inputLog.get_eventid() == SignatureDetector.EVENT_NTLM):
             result = SignatureDetector.isEternalWin8(inputLog)
@@ -124,14 +122,21 @@ class SignatureDetector:
     def compareSID(inputLog):
         accountname=inputLog.get_accountname()
         sid=inputLog.get_securityid()
+
+        conn = mysql.connector.connect(user='root', host='localhost', password='Passw0rd!', database='account')
+        cur = conn.cursor(buffered=True)
         try:
             if accountname != sid:
-                query = 'select sid from users where username=%s;'
-                cur.execute(query, (accountname))
-                curfet = cur.fetchall()
-                if cur.rowcount != 0:
-                    print("Signature D: " + SignatureDetector.RESULT_NOTGT)
-                    return SignatureDetector.RESULT_NOTGT
+                query = "select sid from users where username=%s"
+                #cur.execute("select sid from users where username=%s", ('admin',))
+                cur.execute(query,(accountname, ))
+                #cur.execute("select sid from users where username='"+accountname+"'")
+                for row in cur.fetchall():
+                    sid_db=str(row[0]).lower()
+                    if sid_db==sid:
+                        return SignatureDetector.RESULT_NORMAL
+                print("Signature D: " + SignatureDetector.RESULT_NOTGT)
+                return SignatureDetector.RESULT_NOTGT
             else:
                 return SignatureDetector.RESULT_NORMAL
         finally:

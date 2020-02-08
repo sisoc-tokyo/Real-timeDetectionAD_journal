@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c45c477-e46e-435c-aeec-99cae5822224" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/REST_ocsvm_GT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/REST_ocsvm_GT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.csv" beforeDir="false" afterPath="$PROJECT_DIR$/admin.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/logs.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest_ocsvm_gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_ocsvm_gt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signature_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/signature_detection.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest_ocsvm_gt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+            <state relative-caret-position="578">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -51,32 +53,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/signature_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3402">
-              <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+            <state relative-caret-position="207">
+              <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parse_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -84,22 +65,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/es_ticket_detection_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="88" column="24" selection-start-line="86" selection-end-line="88" selection-end-column="24" />
+            <state relative-caret-position="283">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/update_es.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,19 +131,17 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a7a6d9f0-c191-41b8-a4b1-20d7e4046240/console.sql" />
         <option value="$PROJECT_DIR$/update_es.py" />
         <option value="$PROJECT_DIR$/es_ticket_detection_sql.py" />
-        <option value="$PROJECT_DIR$/rest_ocsvm_gt.py" />
-        <option value="$PROJECT_DIR$/signature_detection.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/admin.csv" />
         <option value="$PROJECT_DIR$/parse_csv.py" />
+        <option value="$PROJECT_DIR$/rest_ocsvm_gt.py" />
+        <option value="$PROJECT_DIR$/signature_detection.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="14" />
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="834" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -202,6 +169,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parse_csv">
+  <component name="RunManager" selected="Python.rest_ocsvm_gt">
     <configuration name="es_ticket_detection_sql" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="REST_ocsvm_GT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,9 +235,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.pyenv/shims/python" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -289,8 +257,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.parse_csv" />
         <item itemvalue="Python.rest_ocsvm_gt" />
+        <item itemvalue="Python.parse_csv" />
         <item itemvalue="Python.es_ticket_detection_sql" />
       </list>
     </recent_temporary>
@@ -318,14 +286,15 @@
       <workItem from="1569761087543" duration="8000" />
       <workItem from="1576481301518" duration="12000" />
       <workItem from="1581112583908" duration="3762000" />
+      <workItem from="1581130038304" duration="4064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40191000" />
+    <option name="totallyTimeSpent" value="44255000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.022174535" />
@@ -333,8 +302,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3385542" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3167116" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.31566265" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -368,6 +337,11 @@
           <line>34</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/signature_detection.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -379,23 +353,50 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="SignatureDetector.df" language="Python" />
-        <watch expression="SignatureDetector.df[(SignatureDetector.df.securityid== SignatureDetector.SYSTEM)] " language="Python" />
-        <watch expression="SignatureDetector.df.securityid== SignatureDetector.SYSTEM" language="Python" />
-        <watch expression="SignatureDetector.df['securityid'] == SignatureDetector.SYSTEM" language="Python" />
-        <watch expression="SignatureDetector.df.securityid" language="Python" />
-        <watch expression="SignatureDetector.SYSTEM" language="Python" />
-        <watch expression="cnt" language="Python" />
+        <watch expression="row['sid']" language="Python" />
+        <watch expression="row" language="Python" />
+        <watch expression="row[0]" language="Python" />
+        <watch expression="row[0].lower()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/detectionTools$es_ticket_detection_sql.coverage" NAME="es_ticket_detection_sql Coverage Results" MODIFIED="1559735320005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/detectionTools$rest_ocsvm_gt.coverage" NAME="rest_ocsvm_gt Coverage Results" MODIFIED="1563944064487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/detectionTools$rest_ocsvm_gt.coverage" NAME="rest_ocsvm_gt Coverage Results" MODIFIED="1581153840221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/detectionTools$parse_csv.coverage" NAME="parse_csv Coverage Results" MODIFIED="1581126241176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>row[0].lower()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toe</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>raw</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row['sid']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>cnt</expression-string>
         <language-id>Python</language-id>
@@ -413,36 +414,6 @@
       </expression>
       <expression>
         <expression-string>item_account[12]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_account[1]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_account[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SignatureDetector.df['securityid'] == SignatureDetector.SYSTEM</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SignatureDetector.df.securityid== SignatureDetector.SYSTEM</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SignatureDetector.df[(SignatureDetector.df.securityid== SignatureDetector.SYSTEM)]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>SignatureDetector.df.securityid</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -498,30 +469,20 @@
     <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-4.3.0/lib/python3.6/threading.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a7a6d9f0-c191-41b8-a4b1-20d7e4046240/console.sql" />
     <entry file="file://$PROJECT_DIR$/detected_ticket.log" />
-    <entry file="file://$PROJECT_DIR$/update_es.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/es_ticket_detection_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="24" selection-start-line="86" selection-end-line="88" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -532,30 +493,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parse_csv.py">
+    <entry file="file://$PROJECT_DIR$/update_es.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="600">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="27" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest_ocsvm_gt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        <state relative-caret-position="578">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/es_ticket_detection_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/signature_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3402">
-          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+        <state relative-caret-position="207">
+          <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
