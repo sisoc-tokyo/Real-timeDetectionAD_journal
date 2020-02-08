@@ -43,10 +43,13 @@ class SignatureDetector:
     df_cmd = pd.DataFrame(data=None, index=None, columns=["processname","tactics"], dtype=None, copy=False)
     df_cmd_white = pd.DataFrame(data=None, index=None, columns=["processname"], dtype=None, copy=False)
 
+    con=None
+
     cnt=0
 
     def __init__(self):
         print("constructor called")
+        conn = mysql.connector.connect(user='root', host='localhost', password='Gamzatti0301!', database='account')
 
     def is_attack(self):
         print("is_attack called")
@@ -104,6 +107,7 @@ class SignatureDetector:
                 result =SignatureDetector.isAdminshare(inputLog)
 
         elif (inputLog.get_eventid() == SignatureDetector.EVENT_LOGIN):
+            result = SignatureDetector.compareSID(inputLog)
             result = SignatureDetector.isEternalWin8(inputLog)
 
 
@@ -115,6 +119,24 @@ class SignatureDetector:
         SignatureDetector.df=SignatureDetector.df.append(series, ignore_index = True)
 
         return result
+
+    @staticmethod
+    def compareSID(inputLog):
+        accountname=inputLog.get_accountname()
+        sid=inputLog.get_securityid()
+        try:
+            if accountname != sid:
+                query = 'select sid from users where username=%s;'
+                cur.execute(query, (accountname))
+                curfet = cur.fetchall()
+                if cur.rowcount != 0:
+                    print("Signature D: " + SignatureDetector.RESULT_NOTGT)
+                    return SignatureDetector.RESULT_NOTGT
+            else:
+                return SignatureDetector.RESULT_NORMAL
+        finally:
+            cur.close()
+            conn.close()
 
     @staticmethod
     def hasNoTGT(inputLog):

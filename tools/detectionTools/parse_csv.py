@@ -43,6 +43,7 @@ def preds(row,file):
         processname = ""
         objectname = ""
         securityid=""
+        result=""
         if (eventid in TARGET_EVT):
             if eventid == SignatureDetector.EVENT_NTLM:
                 item_account = [s for s in item if 'Logon Account' in s]
@@ -124,7 +125,7 @@ def preds(row,file):
             securityid = securityid.lower()
 
         # To specify parameter as Object
-        inputLog = InputLog.InputLog(datetime, eventid, accountname, clientaddr, servicename, processname, objectname, sharedname,securityid)
+        inputLog = InputLog.InputLog(datetime, eventid, securityid,accountname, clientaddr, servicename, processname, objectname, sharedname,securityid)
         # update start by gam
         result = SignatureDetector.signature_detect(inputLog)
 
@@ -148,7 +149,7 @@ def preds(row,file):
             #send_alert.Send_alert(result, datetime, eventid, accountname, clientaddr, servicename, processname, objectname, sharedname)
 
     except:
-        file = open(logfile, 'a')
+        file = open('err.log', 'a')
         file.write(msg)
 
     with open(RESULT_FILE, 'a') as f:
@@ -169,3 +170,5 @@ def read_csv(inputdir):
                 if row:
                     preds(row,file)
 
+if __name__ == '__main__':
+    read_csv(sys.argv[1])
