@@ -11,6 +11,7 @@ import mysql.connector
 class SignatureDetector:
 
     EVENT_LOGIN="4624"
+    EVENT_LOGIN_FAIL = "4625"
     EVENT_TGT = "4768"
     EVENT_ST="4769"
     EVENT_PRIV = "4672"
@@ -109,6 +110,9 @@ class SignatureDetector:
             if (result == SignatureDetector.RESULT_NORMAL):
                 result = SignatureDetector.isEternalWin8(inputLog)
 
+        elif (inputLog.get_eventid() == SignatureDetector.EVENT_LOGIN_FAIL):
+            result = SignatureDetector.compareSID(inputLog)
+
         elif (inputLog.get_eventid() == SignatureDetector.EVENT_NTLM):
             result = SignatureDetector.isEternalWin8(inputLog)
 
@@ -122,6 +126,9 @@ class SignatureDetector:
     def compareSID(inputLog):
         accountname=inputLog.get_accountname()
         sid=inputLog.get_securityid()
+
+        if accountname == '-' or sid == 'NULL SID' or sid == 'system':
+            return SignatureDetector.RESULT_NORMAL
 
         conn = mysql.connector.connect(user='root', host='localhost', password='Passw0rd!', database='account')
         cur = conn.cursor(buffered=True)
