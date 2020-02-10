@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c45c477-e46e-435c-aeec-99cae5822224" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signature_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/signature_detection.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest_ocsvm_gt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="1140">
               <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -46,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/signature_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="129" column="70" lean-forward="true" selection-start-line="129" selection-start-column="70" selection-end-line="129" selection-end-column="70" />
+            <state relative-caret-position="347">
+              <caret line="137" column="50" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -58,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/es_ticket_detection_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="210">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -141,20 +142,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="detectionTools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="detectionTools" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -279,12 +267,15 @@
       <workItem from="1569761087543" duration="8000" />
       <workItem from="1576481301518" duration="12000" />
       <workItem from="1581112583908" duration="3762000" />
-      <workItem from="1581130038304" duration="6545000" />
+      <workItem from="1581130038304" duration="7751000" />
+      <workItem from="1581167853011" duration="392000" />
+      <workItem from="1581326801640" duration="337000" />
+      <workItem from="1581336077334" duration="740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46736000" />
+    <option name="totallyTimeSpent" value="49411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -295,7 +286,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39156628" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43978348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31566265" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,11 +320,6 @@
           <url>file://$PROJECT_DIR$/parse_csv.py</url>
           <line>34</line>
           <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/signature_detection.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -462,13 +448,7 @@
     <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-4.3.0/lib/python3.6/threading.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a7a6d9f0-c191-41b8-a4b1-20d7e4046240/console.sql" />
     <entry file="file://$PROJECT_DIR$/detected_ticket.log" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/parse_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -498,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rest_ocsvm_gt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="1140">
           <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -508,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/es_ticket_detection_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="210">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -518,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signature_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="129" column="70" lean-forward="true" selection-start-line="129" selection-start-column="70" selection-end-line="129" selection-end-column="70" />
+        <state relative-caret-position="347">
+          <caret line="137" column="50" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

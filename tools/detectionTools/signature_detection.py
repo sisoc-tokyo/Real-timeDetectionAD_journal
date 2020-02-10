@@ -130,6 +130,13 @@ class SignatureDetector:
         if accountname == '-' or sid == 'NULL SID' or sid == 'system':
             return SignatureDetector.RESULT_NORMAL
 
+        elif accountname.endswith('$') and sid != 'administrator':
+            return SignatureDetector.RESULT_NORMAL
+
+        logs = SignatureDetector.df_admin[(SignatureDetector.df_admin.accountname == inputLog.get_accountname())]
+        if len(logs) > 0:
+            return SignatureDetector.RESULT_NORMAL
+
         conn = mysql.connector.connect(user='root', host='localhost', password='Passw0rd!', database='account')
         cur = conn.cursor(buffered=True)
         try:
