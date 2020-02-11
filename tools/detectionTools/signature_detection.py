@@ -127,28 +127,33 @@ class SignatureDetector:
         accountname=inputLog.get_accountname()
         sid=inputLog.get_securityid()
 
+        # if accounname or sid is not recorded, exclude from detection
+        # if sid is system, exclude from detection
         if accountname == '-' or sid == 'NULL SID' or sid == 'system':
-            return SignatureDetector.RESULT_NORMAL
-
-        elif accountname.endswith('$') and sid != 'administrator':
-            return SignatureDetector.RESULT_NORMAL
-
-        logs = SignatureDetector.df_admin[(SignatureDetector.df_admin.accountname == inputLog.get_accountname())]
-        if len(logs) > 0:
             return SignatureDetector.RESULT_NORMAL
 
         conn = mysql.connector.connect(user='root', host='localhost', password='Passw0rd!', database='account')
         cur = conn.cursor(buffered=True)
         try:
+            # accountname does not match sid
             if accountname != sid:
+                # compare accountname and sid using master DB
                 query = "select sid from users where username=%s"
-                #cur.execute("select sid from users where username=%s", ('admin',))
                 cur.execute(query,(accountname, ))
-                #cur.execute("select sid from users where username='"+accountname+"'")
                 for row in cur.fetchall():
                     sid_db=str(row[0]).lower()
+                    # accountname and sid exsist in master DB
                     if sid_db==sid:
                         return SignatureDetector.RESULT_NORMAL
+
+                # accountname and sid does not exsist in master DB
+                # check whether account has domain admin privilage
+                logs = SignatureDetector.df_admin[
+                    (SignatureDetector.df_admin.accountname == inputLog.get_accountname())]
+                if len(logs) == 0:
+                    # account does not have admin privilage
+                    return SignatureDetector.RESULT_NORMAL
+
                 print("Signature D: " + SignatureDetector.RESULT_NOTGT)
                 return SignatureDetector.RESULT_NOTGT
             else:
