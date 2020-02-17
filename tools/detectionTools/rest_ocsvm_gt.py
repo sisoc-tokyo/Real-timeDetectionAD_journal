@@ -13,6 +13,7 @@ import os
 import dateutil.parser
 import time
 import write_log
+import sys
 
 # Change the following parameters
 DOMAIN_NAME='example2.local'
@@ -135,6 +136,9 @@ def history():
 if __name__ == '__main__':
     try:
         app.run(host='0.0.0.0',threaded=True)
+    except:
+        write_log.Write_log(sys.exc_info(), '', '', '', '', '', '', '',
+                            '', '', '')
     finally:
         print('finally called')
         with open(log, mode='wb') as handle:

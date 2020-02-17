@@ -7,6 +7,7 @@ import time
 from pytz import timezone
 import write_log
 import mysql.connector
+import re
 
 class SignatureDetector:
 
@@ -36,6 +37,7 @@ class SignatureDetector:
     RESULT_MAL_CMD = "attack: Abnormal command or tool is used"
     RESULT_ADMINSHARE = "attack: Admin share is used"
     RESULT_NOTGT="attack: Golden Ticket is used"
+    RESULT_SID_MISMATCH = "attack: SID mismatch"
     RESULT_ROMANCE = "attack: Eternal Romance is used"
     RESULT_SILVER = "attack: Silver Ticket is used"
     WARN = "warning:ST without TGT"
@@ -127,6 +129,14 @@ class SignatureDetector:
         accountname=inputLog.get_accountname()
         sid=inputLog.get_securityid()
 
+        # if sid is not domain SID, exclude from detection
+        pattern = 's\-[0-9]+\-'
+        result = re.match(pattern, sid)
+        if result:
+            sid_list = sid.split('-')
+            if len(sid_list)<5:
+                 return SignatureDetector.RESULT_NORMAL
+
         # if accounname or sid is not recorded, exclude from detection
         # if sid is system, exclude from detection
         if accountname == '-' or sid == 'NULL SID' or sid == 'system':
@@ -154,8 +164,8 @@ class SignatureDetector:
                     # account does not have admin privilage
                     return SignatureDetector.RESULT_NORMAL
 
-                print("Signature D: " + SignatureDetector.RESULT_NOTGT)
-                return SignatureDetector.RESULT_NOTGT
+                print("Signature D: " + SignatureDetector.RESULT_SID_MISMATCH+"sid:"+sid+", account:"+accountname)
+                return SignatureDetector.RESULT_SID_MISMATCH
             else:
                 return SignatureDetector.RESULT_NORMAL
         finally:
