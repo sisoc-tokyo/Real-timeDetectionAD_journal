@@ -86,7 +86,9 @@ class SignatureDetector:
         if (inputLog.get_eventid()==SignatureDetector.EVENT_ST) :
             result=SignatureDetector.hasNoTGT(inputLog)
 
-        elif (inputLog.get_eventid() == SignatureDetector.EVENT_PRIV):
+        elif (inputLog.get_eventid() == SignatureDetector.EVENT_PRIV
+              or inputLog.get_eventid() == SignatureDetector.EVENT_PRIV_SERVICE)\
+                or inputLog.get_eventid() == SignatureDetector.EVENT_PRIV_OPE:
             result =SignatureDetector.isNotAdmin(inputLog)
 
         elif (inputLog.get_eventid() == SignatureDetector.EVENT_PRIV_OPE
@@ -155,6 +157,13 @@ class SignatureDetector:
                     # accountname and sid exsist in master DB
                     if sid_db==sid:
                         return SignatureDetector.RESULT_NORMAL
+
+                query2 = "select sid from users where sid=%s"
+                cur.execute(query2, (sid,))
+                # accountname does not exist but sid exsist in master DB
+                if cur.rowcount>0:
+                    print("Signature D: " + SignatureDetector.RESULT_SID_MISMATCH + "sid:" + sid + ", account:" + accountname)
+                    return SignatureDetector.RESULT_SID_MISMATCH
 
                 # accountname and sid does not exsist in master DB
                 # check whether account has domain admin privilage
